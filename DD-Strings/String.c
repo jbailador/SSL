@@ -12,8 +12,9 @@ int getLength(char* cadena){
     return cont;
 }
 
-bool isEmpty(char *cadena) {
-    return getLength(cadena) == 0 ? true : false;
+bool isEmpty(const char *cadena) {
+    // Solo miramos si el primer carácter (cadena[0]) es el fin de cadena ('\0')
+    return cadena[0] == '\0'; 
 }
 
 bool areDecimalDigits(char* cadena) {

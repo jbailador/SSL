@@ -21,7 +21,7 @@ bool areDecimalDigits(const char* cadena) {
     return true; 
 }
 
-int toInteger(char* cadena) {
+int toInteger(const char* cadena) {
     int resultado = 0;
     for (int i = 0; cadena [i] != '\0'; i++)
     {
@@ -30,7 +30,7 @@ int toInteger(char* cadena) {
     return resultado;
 }
 
-bool contains(char* cadena, char caracter) {
+bool contains(const char* cadena, char caracter) {
 
     for(; *cadena != '\0'; cadena++) {
         if(*cadena == caracter) return true;
@@ -44,7 +44,7 @@ bool areEqual(const char* cadena1, const char* cadena2) {
     return areEqual(cadena1 + 1, cadena2 + 1);
 }
     
-char* concatenate(char* cadena1, char* cadena2){
+char* concatenate(const char* cadena1, const char* cadena2){
     int total = getLength(cadena1)+getLength(cadena2);
     char* cadenaConcatenada = (char*)malloc(total+1);
 
@@ -64,7 +64,7 @@ char* concatenate(char* cadena1, char* cadena2){
     return cadenaConcatenada;
 }
 
-char* power(char* cadena1, int potencia) {
+char* power(const char* cadena1, int potencia) {
     int len = getLength(cadena1);
     char* nuevo = (char*)malloc((len * potencia) + 1);
 

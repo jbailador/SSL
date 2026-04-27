@@ -1,5 +1,6 @@
-#include "string.c"
 #include <stdio.h>
+#include "String.h"
+
 int main(int argc, char const *argv[])
 {
     int cont = 0;
@@ -7,22 +8,17 @@ int main(int argc, char const *argv[])
     {
         if (i!=0)
         {
-            if(areEqual(argv[i], argv[i+1])){
+            if(areEqual(argv[i], argv[i+1]))
                 cont++;
-            }
 
         }
         
     }
 
     if (cont==argc-2)
-    {
         printf("Son todos iguales");
-    }else{
+    else
         printf("No son todos iguales");
-
-    }
-    
     
     return 0;
 }

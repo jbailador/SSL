@@ -96,9 +96,9 @@ char* Power(const char* cadena1, int potencia) {
 
 //Operacion libre: ToUpper
 char* ToUpper(char* cadena1){
-    for (int i = 0; i < GetLength(cadena1); i++)
+    for (int i = 0; cadena1[i] != '\0'; i++)
     {
-        if(cadena1[i]>=97 && cadena1[i]<=122)
+        if(cadena1[i] >= 'a' && cadena1[i] <= 'z')
             cadena1[i] -= 32;
     }
     return cadena1;

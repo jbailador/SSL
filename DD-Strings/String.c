@@ -103,3 +103,14 @@ char* ToUpper(char* cadena1){
     }
     return cadena1;
 }
+
+//Operacion libre: startsWith
+bool startsWith(const char* cadena, const char* palabra) {
+    for (const char *c = cadena, *p = palabra; *p != '\0'; c++, p++) {
+        
+        if (*c == '\0' || *c != *p) {
+            return false;
+        }
+    }
+    return true;
+}

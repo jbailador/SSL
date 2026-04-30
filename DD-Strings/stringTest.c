@@ -6,45 +6,45 @@
 
 int main() {
     // Tests getLength
-    assert(getLength("") == 0);
-    assert(getLength("hola") == 4);
-    assert(getLength(" ") == 1);
+    assert(GetLength("") == 0);
+    assert(GetLength("hola") == 4);
+    assert(GetLength(" ") == 1);
 
     // Tests isEmpty
-    assert(isEmpty("") == true);
-    assert(isEmpty("a") == false);
+    assert(IsEmpty("") == true);
+    assert(IsEmpty("a") == false);
 
     // Tests areEqual
-    assert(areEqual("UTN", "UTN") == true);
-    assert(areEqual("SSL", "ssl") == false);
-    assert(areEqual("", "") == true);
+    assert(AreEqual("UTN", "UTN") == true);
+    assert(AreEqual("SSL", "ssl") == false);
+    assert(AreEqual("", "") == true);
 
     // Tests areDecimalDigits
-    assert(areDecimalDigits("123") == true);
-    assert(areDecimalDigits("12a3") == false);
-    assert(areDecimalDigits("") == false);
+    assert(AreDecimalDigits("123") == true);
+    assert(AreDecimalDigits("12a3") == false);
+    assert(AreDecimalDigits("") == false);
 
     // Tests contains
-    assert(contains("Geovox", 'v') == true);
-    assert(contains("EpiVox", 'z') == false);
+    assert(Contains("Geovox", 'v') == true);
+    assert(Contains("EpiVox", 'z') == false);
 
     // Tests toInteger 
-    assert(toInteger("123") == 123);
-    assert(toInteger("0") == 0);
+    assert(ToInteger("123") == 123);
+    assert(ToInteger("0") == 0);
 
 
-    char* resConcat = concatenate("Hola ", "Mundo");
-    assert(areEqual(resConcat, "Hola Mundo"));
+    char* resConcat = Concatenate("Hola ", "Mundo");
+    assert(AreEqual(resConcat, "Hola Mundo"));
     free(resConcat);
 
-    char* resPower = power("Abc", 2);
-    assert(areEqual(resPower, "AbcAbc"));
+    char* resPower = Power("Abc", 2);
+    assert(AreEqual(resPower, "AbcAbc"));
     free(resPower);
 
     // Test toUpper
     char cadenaMuda[] = "hola";
-    toUpper(cadenaMuda);
-    assert(areEqual(cadenaMuda, "HOLA") == true);
+    ToUpper(cadenaMuda);
+    assert(AreEqual(cadenaMuda, "HOLA") == true);
 
     return 0;
 }

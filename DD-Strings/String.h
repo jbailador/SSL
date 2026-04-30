@@ -2,15 +2,15 @@
 #define STRING_H
 #include <stdbool.h>
 
-int getLength(const char* cadena);
-int toInteger(const char* cadena);
-bool areEqual(const char* cadena1, const char* cadena2);
-bool areDecimalDigits(const char* cadena);
-bool contains(const char* cadena, char caracter);
-bool isEmpty (const char *cadena);
+int GetLength(const char* cadena);
+int ToInteger(const char* cadena);
+bool AreEqual(const char* cadena1, const char* cadena2);
+bool AreDecimalDigits(const char* cadena);
+bool Contains(const char* cadena, char caracter);
+bool IsEmpty (const char *cadena);
 
-char* concatenate(const char* cadena1, const char* cadena2);
-char* power(const char* cadena1, int potencia);
-char* toUpper( char* cadena1);
+char* Concatenate(const char* cadena1, const char* cadena2);
+char* Power(const char* cadena1, int potencia);
+char* ToUpper( char* cadena1);
 
 #endif

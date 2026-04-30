@@ -1,17 +1,18 @@
+#include "String.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-int getLength(const char* cadena) {
+int GetLength(const char* cadena) {
     if (*cadena == '\0') return 0;
     return 1 + getLength(cadena + 1);
 }
 
-bool isEmpty(const char *cadena) {
+bool IsEmpty(const char *cadena) {
     return cadena[0] == '\0'; 
 }
 
-bool areDecimalDigits(const char* cadena) {
+bool AreDecimalDigits(const char* cadena) {
     if (cadena[0] == '\0') 
         return false;
     for (int i = 0; cadena[i] != '\0'; i++) {
@@ -21,7 +22,7 @@ bool areDecimalDigits(const char* cadena) {
     return true; 
 }
 
-int toInteger(const char* cadena) {
+int ToInteger(const char* cadena) {
     int resultado = 0;
     for (int i = 0; cadena [i] != '\0'; i++)
     {
@@ -30,7 +31,7 @@ int toInteger(const char* cadena) {
     return resultado;
 }
 
-bool contains(const char* cadena, char caracter) {
+bool Contains(const char* cadena, char caracter) {
 
     for(; *cadena != '\0'; cadena++) {
         if(*cadena == caracter) return true;
@@ -38,13 +39,13 @@ bool contains(const char* cadena, char caracter) {
     return false;
 }
 
-bool areEqual(const char* cadena1, const char* cadena2) {
+bool AreEqual(const char* cadena1, const char* cadena2) {
     if (*cadena1 == '\0' && *cadena2 == '\0') return true;
     if (*cadena1 != *cadena2) return false;
     return areEqual(cadena1 + 1, cadena2 + 1);
 }
     
-char* concatenate(const char* cadena1, const char* cadena2){
+char* Concatenate(const char* cadena1, const char* cadena2){
     int total = getLength(cadena1)+getLength(cadena2);
     char* cadenaConcatenada = (char*)malloc(total+1);
 
@@ -64,7 +65,7 @@ char* concatenate(const char* cadena1, const char* cadena2){
     return cadenaConcatenada;
 }
 
-char* power(const char* cadena1, int potencia) {
+char* Power(const char* cadena1, int potencia) {
     int len = getLength(cadena1);
     char* nuevo = (char*)malloc((len * potencia) + 1);
 
@@ -82,7 +83,7 @@ char* power(const char* cadena1, int potencia) {
     return nuevo;
 }
 
-char* toUpper(char* cadena1){
+char* ToUpper(char* cadena1){
     for (int i = 0; i < getLength(cadena1); i++)
     {
         if(cadena1[i]>=97 && cadena1[i]<=122)

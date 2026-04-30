@@ -5,7 +5,7 @@
 
 int GetLength(const char* cadena) {
     if (*cadena == '\0') return 0;
-    return 1 + getLength(cadena + 1);
+    return 1 + GetLength(cadena + 1);
 }
 
 bool IsEmpty(const char *cadena) {
@@ -42,11 +42,11 @@ bool Contains(const char* cadena, char caracter) {
 bool AreEqual(const char* cadena1, const char* cadena2) {
     if (*cadena1 == '\0' && *cadena2 == '\0') return true;
     if (*cadena1 != *cadena2) return false;
-    return areEqual(cadena1 + 1, cadena2 + 1);
+    return AreEqual(cadena1 + 1, cadena2 + 1);
 }
     
 char* Concatenate(const char* cadena1, const char* cadena2){
-    int total = getLength(cadena1)+getLength(cadena2);
+    int total = GetLength(cadena1)+GetLength(cadena2);
     char* cadenaConcatenada = (char*)malloc(total+1);
 
     if(cadenaConcatenada == NULL) return NULL;
@@ -65,8 +65,19 @@ char* Concatenate(const char* cadena1, const char* cadena2){
     return cadenaConcatenada;
 }
 
+//Operacion libre: StartsWith
+bool StartsWith(const char* cadena, const char* palabra) {
+    for (const char *c = cadena, *p = palabra; *p != '\0'; c++, p++) {
+        
+        if (*c == '\0' || *c != *p) {
+            return false;
+        }
+    }
+    return true;
+}
+
 char* Power(const char* cadena1, int potencia) {
-    int len = getLength(cadena1);
+    int len = GetLength(cadena1);
     char* nuevo = (char*)malloc((len * potencia) + 1);
 
     if(nuevo == NULL) return NULL;
@@ -83,8 +94,9 @@ char* Power(const char* cadena1, int potencia) {
     return nuevo;
 }
 
+//Operacion libre: ToUpper
 char* ToUpper(char* cadena1){
-    for (int i = 0; i < getLength(cadena1); i++)
+    for (int i = 0; i < GetLength(cadena1); i++)
     {
         if(cadena1[i]>=97 && cadena1[i]<=122)
             cadena1[i] -= 32;

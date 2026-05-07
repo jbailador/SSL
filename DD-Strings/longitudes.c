@@ -1,19 +1,11 @@
 #include "String.c"
 #include <stdio.h>
-int main(int argc, char const *argv[])
+int main(int argc, char const argv[])
 {
-    
-    for (int i = 0; i < argc; i++)
+    (void) argc;
+    for (char **p = argv + 1;p != NULL; p++)
     {
-        if (i!=0)
-        {
-            char* buffer = argv[i];
-            int longitud = getLength(buffer);
-            printf("%d\n", longitud);
-
-        }
-        
+        printf ("%d\n", getLength(*p));
     }
-    
     return 0;
 }

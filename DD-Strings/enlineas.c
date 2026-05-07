@@ -1,17 +1,10 @@
-#include <strings.h>
+#include "Strings.h"
 #include <stdio.h>
-int main(int argc, char const *argv[])
-{
-    
-    for (int i = 0; i < argc; i++)
-    {
-        if (i!=0)
-        {
-            printf("%s\n", argv[i]);
 
-        }
-        
+int main(int argc, char argv[]) {
+    (void)argc; 
+    for (char **p = argv + 1; *p != NULL; p++) {
+        printf("%s\n", *p);
     }
-    
     return 0;
 }

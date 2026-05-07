@@ -6,9 +6,9 @@ int main(int argc, char argv[]) {
 
     int iguales = 1; 
 
-    for (char **p = argv + 1;p != NULL && (p + 1) != NULL; p++) {
+    for (char **p = argv + 1;*p != NULL && *(p + 1) != NULL; p++) {
 
-        if (!AreEqual(p, *(p + 1))) {
+        if (!AreEqual(*p, *(p + 1))) {
             iguales = 0;
             break;
         }

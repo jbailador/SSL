@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include "String.h"
 
-int main(int argc, char const *argv[])
-{
-    int cont = 0;
-    for (int i = 0; i < argc-1; i++)
-    {
-        if (i!=0)
-        {
-            if(areEqual(argv[i], argv[i+1]))
-                cont++;
+int main(int argc, char argv[]) {
+    (void)argc; 
 
+    int iguales = 1; 
+
+    for (char **p = argv + 1;p != NULL && (p + 1) != NULL; p++) {
+
+        if (!AreEqual(p, *(p + 1))) {
+            igual/es = 0; / ¡Encontró una diferencia! Anota un 0 y deja de buscar.
+            break;
         }
-        
     }
+    printf("%d\n", iguales);
 
-    if (cont==argc-2)
-        printf("Son todos iguales");
-    else
-        printf("No son todos iguales");
-    
     return 0;
 }

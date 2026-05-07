@@ -1,4 +1,4 @@
-#include "String.c"
+#include "String.h"
 #include <stdio.h>
 int main(int argc, char const argv[])
 {

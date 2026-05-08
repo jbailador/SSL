@@ -33,20 +33,17 @@ C: No. No se pueden asignar arreglos directamente con =, no se pueden comparar c
   
 Python: Sí. Se pueden pasar como argumentos, retornar, asignar a variables y comparar con operadores lógicos de forma directa, igual que un entero o un booleano.  
   
-#### 7. Mecánica de Pasaje como Argumento y Retorno  
-C:  
+#### 7. Mecánica de Pasaje como Argumento   
+C: Se pasa por referencia (se envía el puntero a la primera posición de memoria). Cualquier cambio dentro de la función afecta al original si es un arreglo.  
   
-Pasaje: Se pasa por referencia (se envía el puntero a la primera posición de memoria). Cualquier cambio dentro de la función afecta al original si es un arreglo.  
+Python: Se pasa por asignación de objeto (similar a referencia). Sin embargo, como es inmutable, la función no puede modificar el string original del llamador.   
+
+#### 8. Mecánica de Retorno de un String
+C: No se puede retornar un arreglo local. Hay que retornar un puntero a memoria dinámica (malloc) o recibir un buffer como parámetro. 
+
+Python:Se retorna la referencia al objeto de forma directa y sencilla. 
   
-Retorno: No se puede retornar un arreglo local. Hay que retornar un puntero a memoria dinámica (malloc) o recibir un buffer como parámetro.   
-  
-Python:  
-  
-Pasaje: Se pasa por asignación de objeto (similar a referencia). Sin embargo, como es inmutable, la función no puede modificar el string original del llamador.  
-  
-Retorno:Se retorna la referencia al objeto de forma directa y sencilla.  
-  
-#### 8. Soporte para ASCII, Unicode y UTF-8  
+#### 9. Soporte para ASCII, Unicode y UTF-8  
 C: Soporte nativo limitado a ASCII. El soporte para UTF-8 es manual: el programador debe entender que un "carácter" visual puede ocupar varios bytes en memoria.  
   
 Python: Soporte total y transparente. Todas las cadenas son Unicode. La conversión a formatos de transporte como UTF-8 se gestiona mediante los métodos .encode() y .decode().  

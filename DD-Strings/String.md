@@ -8,7 +8,7 @@ Retorna la cantidad de caracteres de una cadena, sin contar el carácter '\0'.
 
 int ToInteger(const char* cadena);
 ## Descripción
-Convierte un número decimal expresado como un arreglo de caracteres en su equivalente de tipo int.
+Convierte un arreglo formado por caracteres decimales en su equivalente de tipo int.
 ## Parámetros
 Recibe un puntero a un arreglo de caracteres numéricos.
 ## Retorno

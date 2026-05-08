@@ -23,6 +23,9 @@ bool AreDecimalDigits(const char* cadena) {
 }
 
 int ToInteger(const char* cadena) {
+    if (!AreDecimalDigits(cadena)) {
+        return 0;
+    }
     int resultado = 0;
     for (int i = 0; cadena [i] != '\0'; i++)
     {

@@ -4,7 +4,7 @@ Cuenta los caracteres de una cadena de manera recursiva hasta llegar a '\0'.
 ## Parámetros
 Recibe un puntero a un arreglo de caracteres.
 ## Retorno
-Retorna la cantidad de caracteres de una cadena menos el '\0'.
+Retorna la cantidad de caracteres de una cadena, sin contar el carácter '\0'.
 
 int ToInteger(const char* cadena);
 ## Descripción
@@ -28,7 +28,7 @@ Revisa que todos los caracteres de un arreglo representen números decimales.
 ## Parámetros
 Recibe un puntero a un arreglo de caracteres.
 ## Retorno
-Retorna 1 si el arreglo ingresado solo contiene caracteres númericos entre el '0' y el '1', y 0 si no es así.
+Retorna 1 si el arreglo ingresado solo contiene caracteres numéricos entre el '0' y el '9', y 0 si no es así.
 
 bool Contains(const char* cadena, char caracter);
 ## Descripción
@@ -72,7 +72,7 @@ Retorna un nuevo arreglo de caracteres que contiene al ingresado la cantidad de 
 
 char* ToUpper( char* cadena1);
 ## Descripción
-Convierte un arreglo de caracteres formado por letras minúsculas del alfabeto en su equivalente en letras mayúsculas.
+Convierte las letras minúsculas del alfabeto de un arreglo de caracteres en su equivalente en letras mayúsculas.
 ## Parámetros
 Recibe un arreglo de caracteres.
 ## Retorno

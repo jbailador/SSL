@@ -1,6 +1,6 @@
 #include "String.h"
 #include <stdio.h>
-int main(int argc, char const argv[])
+int main(int argc, char* argv[])
 {
     (void) argc;
     for (char **p = argv + 1;p != NULL; p++)

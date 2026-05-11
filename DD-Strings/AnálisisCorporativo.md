@@ -11,7 +11,7 @@ Python: Es un tipo de dato nativo y fundamental llamado str. Está integrado dir
 #### 2. ¿El tipo es parte de la biblioteca?  
 C: Sí, casi toda la funcionalidad está en la biblioteca estándar <string.h>, que provee funciones para manipular esos arreglos de bytes (como strlen, strcpy).  
   
-Python: Sí, pero como un objeto. El tipo str tiene sus propios métodos integrados (ej: .split(), .upper()), aunque existen bibliotecas adicionales (como re para expresiones regulares).  
+Python: Sí, pero como una clase. El tipo str tiene sus propios métodos integrados (ej: .split(), .upper()), aunque existen bibliotecas adicionales (como re para expresiones regulares).  
   
 #### 3. Alfabeto y Codificación  
 C: Tradicionalmente usa ASCII (cada char es 1 byte). No tiene noción nativa de caracteres multibyte, aunque existen extensiones como wchar_t, pero no son el estándar común.  

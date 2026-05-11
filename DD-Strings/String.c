@@ -50,7 +50,7 @@ bool AreEqual(const char* cadena1, const char* cadena2) {
     
 char* Concatenate(const char* cadena1, const char* cadena2){
     int total = GetLength(cadena1)+GetLength(cadena2);
-    char* cadenaConcatenada = (char*)malloc(total+1);
+    char* cadenaConcatenada = malloc(total+1);
 
     if(cadenaConcatenada == NULL) return NULL;
     char* p = cadenaConcatenada;
@@ -81,7 +81,7 @@ bool StartsWith(const char* cadena, const char* palabra) {
 
 char* Power(const char* cadena1, int potencia) {
     int len = GetLength(cadena1);
-    char* nuevo = (char*)malloc((len * potencia) + 1);
+    char* nuevo = malloc((len * potencia) + 1);
 
     if(nuevo == NULL) return NULL;
 

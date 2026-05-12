@@ -40,10 +40,10 @@ String.o: String.c String.h
 	$(CC) $(CFLAGS) $< -o $@
 
 test: $(PROG1)
-    ./$(PROG1)
+	./$(PROG1)
 
 clean:
-    rm -f .o.exe
+	rm -f .o.exe
 
 run: prog
 	.\prog.exe

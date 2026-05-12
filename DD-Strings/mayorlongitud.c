@@ -7,12 +7,12 @@ int main(int argc, char *argv[]) {
     
  
     char *mayor = *(argv + 1);
-    int maxLen = getLength(mayor);
+    int maxLen = GetLength(mayor);
     
 
     for (char **p = argv + 2; *p != NULL; p++) {
         
-        int actualLen = getLength(*p); 
+        int actualLen = GetLength(*p); 
         
     
         if (actualLen > maxLen) {

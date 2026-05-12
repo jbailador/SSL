@@ -43,5 +43,5 @@ test: $(PROG1)
 	./$(PROG1)
 
 clean:
-	del *.o
-	del *.exe
+	rm -f *.o
+	rm -f *.exe

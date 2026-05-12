@@ -1,5 +1,6 @@
 #ifndef STRING_H
 #define STRING_H
+#include <stdbool.h>
 
 /*
  * Pre: 'cadena' debe ser un puntero válido y terminar en el carácter nulo '\0'.

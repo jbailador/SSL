@@ -43,7 +43,5 @@ test: $(PROG1)
 	./$(PROG1)
 
 clean:
-	rm -f .o.exe
-
-run: prog
-	.\prog.exe
+	del *.o
+	del *.exe

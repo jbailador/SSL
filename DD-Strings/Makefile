@@ -10,7 +10,7 @@ PROG6 = todosiguales
 
 .PHONY: clean run test
 
-all: $(PROG1) $(PROG2) $(PROG3) $(PROG4) $(PROG5) $(PROG6) $(PROG7)
+all: $(PROG1) $(PROG2) $(PROG3) $(PROG4) $(PROG5) $(PROG6) 
 
 $(PROG1): stringTest.o String.o
 	$(CC) stringTest.o String.o -o $(PROG1)
@@ -39,11 +39,11 @@ stringTest.o: stringTest.c String.h
 String.o: String.c String.h
 	$(CC) $(CFLAGS) $< -o $@
 
-test: prog
-	.\prog.exe
+test: $(PROG1)
+    ./$(PROG1)
 
 clean:
-	rm stringTest.o String.o prog.exe
+    rm -f .o.exe
 
 run: prog
 	.\prog.exe
